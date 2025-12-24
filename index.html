@@ -146,8 +146,8 @@ img.emoji {
 				</div>
 			</div>
             <div id="h-text">
-                <h1  class="desktop-only" style="font-size:28px; margin: 5% 0% 0% 0%; font-weight: 700; text-align:right;">Texas Top Asphalt Services Provider</h1>
-                <a class="desktop-only" style="float: right; text-indent: 0px;margin:0% 0%;" id="mobile-phone-cta" href="tel:+14049131793">(404) 913-1793</a>
+                <h1  class="desktop-only" style="font-size:28px; margin: 5% 0% 0% 0%; font-weight: 700; text-align:right;">Georgia Top Asphalt Services Provider</h1>
+                <a class="desktop-only" style="float: right; text-indent: 0px;margin:0% 0%;" id="desktop-phone-cta" href="tel:+14049131793">(404) 913-1793</a>
 
             </div>
 			<br clear="all"/>
@@ -162,11 +162,11 @@ img.emoji {
 							<div class="bar3"></div>
 						</div>
 					</div>
-					<div id="top-nav">
-						<a  id="c" href="https://nyacontractors.com/">Home</a>
-						<a  id="c" href="">Request Service</a>
-						<a  href="/gallery.html">Our Work</a>
-						<a  id="c" href="#">Contact Us</a>
+					<nav id="top-nav">
+						<a class="nav-link" href="https://nyacontractors.com/">Home</a>
+						<a class="nav-link" href="">Request Service</a>
+						<a class="nav-link" href="/gallery.html">Our Work</a>
+						<a class="nav-link" href="#">Contact Us</a>
 					</nav>
 				</div>
 			</div>
@@ -176,6 +176,319 @@ img.emoji {
 <style>
     div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error {
         border-color: red !important;
+    }
+    
+    /* Form Styling - Clean and Modern with Legacy Feel */
+    #form-container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    
+    #form-container h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        text-align: center;
+        color: #2c3e4f;
+        font-weight: 600;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+        font-size: 14px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #2c3e4f;
+    }
+    
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 14px 30px;
+        background-color: #2c3e4f;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .submit-button:hover {
+        background-color: #1a2836;
+        transform: translateY(-2px);
+    }
+    
+    .submit-button:active {
+        transform: translateY(0);
+    }
+    
+    #form-message {
+        text-align: center;
+        font-weight: 500;
+    }
+    
+    #form-message.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    #form-message.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+    
+    /* Improved overall design */
+    body {
+        font-family: 'Questrial', 'Sanchez', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    #copy-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    #main-copy {
+        margin-bottom: 20px;
+    }
+    
+    #headline {
+        font-size: 32px;
+        color: #2c3e4f;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    #highlighted-text {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-left: 4px solid #2c3e4f;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    
+    #highlighted-text ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    #highlighted-text li {
+        margin: 8px 0;
+        color: #555;
+    }
+    
+    #how-it-works {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        margin: 40px 0;
+        border-radius: 8px;
+    }
+    
+    #how-it-works h2 {
+        text-align: center;
+        font-size: 32px;
+        color: #2c3e4f;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    
+    #how-it-works ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #how-it-works li {
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    #how-it-works li img {
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+    
+    #how-it-works li span {
+        display: block;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    /* Header and Navigation Improvements */
+    header.navigation {
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+    }
+    
+    #logo-container img {
+        max-height: 60px;
+        width: auto;
+    }
+    
+    #h-text h1 {
+        color: #2c3e4f;
+        margin-top: 10px;
+    }
+    
+    #mobile-phone-cta,
+    #top-nav a {
+        color: #2c3e4f;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    #mobile-phone-cta:hover,
+    #top-nav a:hover {
+        color: #1a2836;
+    }
+    
+    #top-nav {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    #top-nav a {
+        padding: 8px 0;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    
+    #top-nav a:hover {
+        border-bottom-color: #2c3e4f;
+    }
+    
+    /* Services Section Improvements */
+    .rrow {
+        margin: 30px 0;
+    }
+    
+    .rrow h3 {
+        margin-bottom: 15px;
+    }
+    
+    .rrow div {
+        line-height: 1.8;
+        color: #555;
+    }
+    
+    .rrow ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+    .rrow li {
+        margin: 8px 0;
+    }
+    
+    /* Footer Improvements */
+    .footer {
+        background-color: #f8f9fa;
+        padding: 30px 20px;
+        margin-top: 50px;
+        text-align: center;
+        border-top: 2px solid #e9ecef;
+    }
+    
+    .footer-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-block a {
+        color: #2c3e4f;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-block a:hover {
+        color: #1a2836;
+        text-decoration: underline;
+    }
+    
+    .copyright-text {
+        color: #666;
+    }
+    
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        #form-container {
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        #headline {
+            font-size: 24px;
+        }
+        
+        #how-it-works ul {
+            flex-direction: column;
+        }
+        
+        #h-text h1 {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #top-nav {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 </style>
 
@@ -221,7 +534,7 @@ img.emoji {
 </ul>            </div>
         </div>
         <div id="main-photo">
-            <img loading="lazy" loading="lazy" src="/service-photo-default.jpg" alt="Find Services Offered By Professionals" width="319">
+            <img loading="lazy" src="/service-photo-default.jpg" alt="Find Services Offered By Professionals" width="319">
         </div>
         <br clear="all"/>
 
@@ -231,9 +544,81 @@ img.emoji {
     </div>
 
     <div id="form-container" class="champion ">
-        <!-- <div id="nyacontractors_4737459149144064" class="agile_crm_form_embed"><span style="display:none">Fill out my <a href="https://nyacontractors.agilecrm.com/forms/4737459149144064">online form</a></span></div>
-        -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcclhhfOqxdZw3KFJ2yTrOfnA4k0vFqnm4pkzDWU1FV_8hVA/viewform?embedded=true" width="640" height="1159" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    
+        <form id="contact-form" action="https://formsubmit.co/nyacontractors@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Submission from NYA Contractors Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://nyacontractors.com/thanks.html">
+            
+            <h2 style="margin-bottom: 20px; font-family: 'Playfair Display', serif; color: #2c3e4f;">Request Service</h2>
+            
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(404) 555-1234">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Service Address *</label>
+                <input type="text" id="address" name="address" required placeholder="Enter service address">
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required placeholder="Enter city">
+            </div>
+            
+            <div class="form-group">
+                <label for="state">State *</label>
+                <input type="text" id="state" name="state" required placeholder="GA" value="GA">
+            </div>
+            
+            <div class="form-group">
+                <label for="zip">ZIP Code *</label>
+                <input type="text" id="zip" name="zip" required placeholder="Enter ZIP code">
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Service Needed *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Seal Coating">Seal Coating</option>
+                    <option value="Striping & Markings">Striping & Markings</option>
+                    <option value="Signage">Signage</option>
+                    <option value="Asphalt Repair">Asphalt Repair</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="best-time">Best Time to Contact</label>
+                <select id="best-time" name="best_time">
+                    <option value="">Select best time</option>
+                    <option value="Morning (8am-12pm)">Morning (8am-12pm)</option>
+                    <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
+                    <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
+                    <option value="Weekend">Weekend</option>
+                </select>
+            </div>
+            
+            <div id="form-message" style="display: none; padding: 15px; margin: 15px 0; border-radius: 5px;"></div>
+            
+            <button type="submit" id="submit-btn" class="submit-button">Submit Request</button>
+        </form>
 </div>
 <!--
     <div id="about-us">
@@ -252,17 +637,17 @@ img.emoji {
         <h2>How It Works</h2>
         <ul>
             <li>
-                <img loading="lazy" loading="lazy" alt="Tell us about your project, service address, and how to get in touch."
+                <img loading="lazy" alt="Tell us about your project, service address, and how to get in touch."
                      src="/pics/how-it-works_icon1.png"/>
                 <span>Tell us about your project, service address, and how to get in touch.</span>
             </li>
             <li>
-                <img loading="lazy" loading="lazy" alt="We contact our professionals and find the best one for you."
+                <img loading="lazy" alt="We contact our professionals and find the best one for you."
                      src="/pics/how-it-works_icon2.png"/>
                 <span>We connect you with our trained service professionals to help with your job. If we can't serve you due to market availability or capacity, we will connect you with a vetted partner.</span>
             </li>
             <li>
-                <img loading="lazy" loading="lazy" alt="One of our skilled pros will be in touch with you to get started."
+                <img loading="lazy" alt="One of our skilled pros will be in touch with you to get started."
                      src="/pics/how-it-works_icon3.png"/>
                 <span>A trusted professional will contact you about your project.</span>
             </li>
@@ -395,6 +780,7 @@ padding-top: 30px;transition: opacity 1s ease-in-out; width: 80%; margin: 0% 8%;
     <footer class="footer">
         <div class="footer-block">
             <div class="copyright-text">&copy; 2022 NYA Contractors</div>
+            <div style="width: 100%; text-align: center; margin-top: 10px; color: #666; font-size: 14px;">Owned by Zimmer Group</div>
             <span>|</span>
            <a href="/privacy.html">Privacy</a>
             <span>|</span>
@@ -441,8 +827,59 @@ var wpforms_settings = {"val_required":"This field is required.","val_url":"Plea
 </script>
 
     <script type="text/javascript">
+        // Form submission handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    // Show loading state
+                    submitBtn.textContent = 'Submitting...';
+                    submitBtn.disabled = true;
+                    
+                    // FormSubmit will handle the submission and redirect
+                    // If there's an error, it will be handled by FormSubmit's error page
+                });
+                
+                // Phone number formatting
+                const phoneInput = document.getElementById('phone');
+                if (phoneInput) {
+                    phoneInput.addEventListener('input', function(e) {
+                        let value = e.target.value.replace(/\D/g, '');
+                        if (value.length > 0) {
+                            if (value.length <= 3) {
+                                value = '(' + value;
+                            } else if (value.length <= 6) {
+                                value = '(' + value.slice(0, 3) + ') ' + value.slice(3);
+                            } else {
+                                value = '(' + value.slice(0, 3) + ') ' + value.slice(3, 6) + '-' + value.slice(6, 10);
+                            }
+                        }
+                        e.target.value = value;
+                    });
+                }
+            }
+        });
+        
+        // Focus on form function
+        function focusOnForm() {
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const firstInput = form.querySelector('input, textarea, select');
+                if (firstInput) {
+                    setTimeout(() => firstInput.focus(), 500);
+                }
+            }
+        }
+        
+        // Make focusOnForm available globally
+        window.focusOnForm = focusOnForm;
+        
         // attach click handlers
-        jQuery("#logo-container img, #social-icons a, #c, .footer-block h4 a").click(function (e) {
+        jQuery("#logo-container img, #social-icons a, .nav-link, .footer-block h4 a").click(function (e) {
             e.preventDefault();
             focusOnForm();
         });
