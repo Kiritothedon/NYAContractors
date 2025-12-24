@@ -236,6 +236,8 @@ img.emoji {
         transition: all 0.3s ease;
         box-sizing: border-box;
         background-color: #ffffff;
+        display: block;
+        margin: 0;
     }
     
     .form-group input:focus,
@@ -352,7 +354,18 @@ img.emoji {
     #form-container {
         grid-column: 2;
         position: sticky;
-        top: 100px;
+        top: 120px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+        margin-bottom: 40px;
+    }
+    
+    /* Ensure form doesn't overlap with How It Works section */
+    #how-it-works {
+        clear: both;
+        position: relative;
+        z-index: 1;
+        margin-top: 60px;
     }
     
     #wide-copy {
@@ -501,7 +514,7 @@ img.emoji {
     header.navigation {
         background-color: #ffffff;
         box-shadow: var(--shadow-md);
-        padding: 20px 0;
+        padding: 0;
         position: relative;
         z-index: 100;
     }
@@ -509,22 +522,33 @@ img.emoji {
     #logo-container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 30px 20px;
+        position: relative;
+        min-height: 150px;
     }
     
     #logo-container img {
         height: auto;
-        max-height: 80px;
+        max-height: 140px;
         width: auto;
+        display: block;
+    }
+    
+    #logo-container a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     #h-text {
-        flex: 1;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
         text-align: right;
-        padding-right: 20px;
     }
     
     #h-text h1 {
@@ -537,8 +561,9 @@ img.emoji {
     
     .navigation-wrapper {
         max-width: 1200px;
-        margin: 15px auto 0;
-        padding: 0 20px;
+        margin: 0 auto;
+        padding: 15px 20px;
+        border-top: 1px solid var(--border-color);
     }
     
     #mobile-phone-cta,
@@ -625,33 +650,54 @@ img.emoji {
     /* Footer Improvements */
     .footer {
         background-color: #f8f9fa;
-        padding: 30px 20px;
-        margin-top: 50px;
+        padding: 40px 20px;
+        margin-top: 60px;
         text-align: center;
         border-top: 2px solid #e9ecef;
     }
     
     .footer-block {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    
-    .footer-block a {
-        color: #2c3e4f;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    .footer-block a:hover {
-        color: #1a2836;
-        text-decoration: underline;
+        gap: 15px;
     }
     
     .copyright-text {
         color: #666;
+        font-size: 15px;
+    }
+    
+    .footer-ownership {
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .footer-links a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 14px;
+    }
+    
+    .footer-links a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+    }
+    
+    .footer-separator {
+        color: #999;
+        margin: 0 5px;
     }
     
     /* Professional Responsive Design */
@@ -677,20 +723,24 @@ img.emoji {
     
     @media (max-width: 768px) {
         #copy-container {
-            padding: 30px 15px;
+            padding: 25px 15px;
             gap: 30px;
         }
         
         #form-container {
-            padding: 25px;
+            padding: 25px 20px;
+            position: static;
+            max-height: none;
+            overflow: visible;
         }
         
         #headline {
-            font-size: 28px;
+            font-size: 26px;
         }
         
         #how-it-works {
             padding: 40px 15px;
+            margin: 40px 0;
         }
         
         #how-it-works ul {
@@ -698,20 +748,32 @@ img.emoji {
             gap: 25px;
         }
         
+        #h-text {
+            position: static;
+            transform: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
         #h-text h1 {
             font-size: 18px;
-            text-align: center;
-            padding-right: 0;
         }
         
         #logo-container {
             flex-direction: column;
             gap: 15px;
+            min-height: auto;
+            padding: 20px;
+        }
+        
+        #logo-container img {
+            max-height: 100px;
         }
         
         #top-nav {
             flex-wrap: wrap;
             gap: 8px;
+            justify-content: center;
         }
         
         #top-nav a {
@@ -719,8 +781,22 @@ img.emoji {
             font-size: 14px;
         }
         
-        header.navigation {
-            padding: 15px 0;
+        .footer {
+            padding: 30px 15px;
+        }
+        
+        .footer-links {
+            flex-wrap: wrap;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px; /* Prevents zoom on iOS */
         }
     }
 </style>
@@ -855,6 +931,8 @@ img.emoji {
     </div>
     
     </div>
+    
+    <div style="clear: both; height: 0; overflow: hidden;"></div>
 <!--
     <div id="about-us">
         <h2>About Us</h2>
@@ -1014,14 +1092,14 @@ padding-top: 30px;transition: opacity 1s ease-in-out; width: 80%; margin: 0% 8%;
 
     <footer class="footer">
         <div class="footer-block">
-            <div class="copyright-text">&copy; 2022 NYA Contractors</div>
-            <div style="width: 100%; text-align: center; margin-top: 10px; color: #666; font-size: 14px;">Owned by Zimmer Group</div>
-            <span>|</span>
-           <a href="/privacy.html">Privacy</a>
-            <span>|</span>
-            <a href="/terms.html">Terms Of Service</a>
-                                </div>
-        <br clear="all"/>
+            <div class="copyright-text">&copy; 2025 NYA Contractors</div>
+            <div class="footer-ownership">Owned by Zimmer Group</div>
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy</a>
+                <span class="footer-separator">|</span>
+                <a href="/terms.html">Terms Of Service</a>
+            </div>
+        </div>
     </footer>
 
     </div><!-- #page -->
