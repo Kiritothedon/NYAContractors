@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	
+<!-- Sun, 31 Jul 2022 03:56:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NGZK8H2');</script>
+    <!-- End Google Tag Manager -->
+		<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-5b220f295ac98f3570e",applicationID:"1100181646"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https:///")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link rel="pingback" href="xmlrpc.html">
+		<link rel="icon" href="/sng.png">
+
+        <!-- <link rel="stylesheet" href="/style2.css"/> -->
+        <link type="javascript" src="/script.js"/>
+
+        <title>NYA Contractors | Commercial Electrical & Asphalt Services Here!</title>
+<meta name='robots' content='noindex, nofollow' />
+<link rel='dns-prefetch' href='https://nyacontractors.com/' />
+<link rel='dns-prefetch' href='https://cdnjs.cloudflare.com/' />
+<link rel='dns-prefetch' href='https://cdn.jsdelivr.net/' />
+<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="NYA Contractors &raquo; Feed" href="#" />
+<link rel="alternate" type="application/rss+xml" title="NYA Contractors &raquo; Comments Feed" href="#" />
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/gouldfamilycontractors.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.1"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+	<link rel='stylesheet' id='wp-block-library-css'  href='/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='3ships-css-css'  href='/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hooch-style-css'  href='/xstyle.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hooch-questrial-css'  href='https://fonts.googleapis.com/css?family=Questrial&amp;ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='hooch-sanchez-css'  href='https://fonts.googleapis.com/css?family=Sanchez%3A400italic%2C400&amp;ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='glightbox-css-css'  href='https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css?ver=5.7.1' type='text/css' media='all' />
+<script type='text/javascript' src='/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="Nya Contractors" />
+<link rel="canonical" href="https://nyacontractors.com/" />
+<link rel='shortlink' href='https://nyacontractors.com/' />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:wght@300;400;500;600|Playfair+Display&amp;display=swap" rel="stylesheet">
+        
+		<!-- Start set favicon depending on browser scheme mode -->
+		<script>
+			var domFavicon = jQuery('link[rel="icon"]'),
+				isDark = window.matchMedia("(prefers-color-scheme: dark)");
+				darkIcon = ''
+				if(isDark.matches && darkIcon.length)
+					domFavicon.attr('href', darkIcon);
+		</script>
+		<!-- END set favicon depending on browser scheme mode -->
+		
+		<!-- Start international fonts -->
+				<!-- END international fonts -->
+                <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10965800723"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10965800723');
+</script>
+        <!-- Facebook Pixel Tracking-->
+            <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1225948698000320');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1225948698000320&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+    <meta name="facebook-domain-verification" content="e0iw4uocw92egjcwhtmylu1kjhs3ui" />
+        <!--End Facebook Tracking-->
+
+    <!-- Google tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C646Q93ESL">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C646Q93ESL');
+</script>
+        	</head>
+
+
+<body class="home page-template page-template-templates page-template-template-homepage-form page-template-templatestemplate-homepage-form-php page page-id-10 group-blog">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGZK8H2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+					
+            <style> body { padding-top: 65px; } </style>
+            <script type="text/javascript"> banner_active = true; </script>
+                            <a id="site-banner" href="javascript:focusOnForm();"><span>We Work Weekends To Provide Fast Responses & Service Times!</span></a>
+	<div id="page" class="hfeed site ">
+		<header class="navigation" role="banner">
+			<div id="logo-container">
+				<a href="https://nyacontractors.com/" class="desktop-only"><img loading="lazy" src="/hg.png" alt="NYA Contractors"></a>
+				<a href="https://nyacontractors.com/" class="mobile-only"><img loading="lazy" src="/hg.png" alt="NYA Contractors"></a>
+				
+                <div id="mobile-menu-compact">
+					<div class="mobile-toggle">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div>
+				</div>
+			</div>
+            <div id="h-text">
+                <h1  class="desktop-only" style="font-size:28px; margin: 5% 0% 0% 0%; font-weight: 700; text-align:right;">Texas Top Asphalt Services Provider</h1>
+                <a class="desktop-only" style="float: right; text-indent: 0px;margin:0% 0%;" id="mobile-phone-cta" href="tel:+14049131793">(404) 913-1793</a>
+
+            </div>
+			<br clear="all"/>
+
+			<div class="navigation-wrapper">
+				<div class="row">
+					<a class="mobile-only" id="mobile-phone-cta" href="tel:+14049131793">(404) 913-1793</a>
+					<div id="mobile-menu">
+						<div class="mobile-toggle">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+					</div>
+					<div id="top-nav">
+						<a  id="c" href="https://nyacontractors.com/">Home</a>
+						<a  id="c" href="">Request Service</a>
+						<a  href="/gallery.html">Our Work</a>
+						<a  id="c" href="#">Contact Us</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div id="content" class="site-content">
+<style>
+    div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error {
+        border-color: red !important;
+    }
+</style>
+
+
+
+    <script type="text/javascript">
+        var project = '',
+            gclid = '',
+            incoming_project = '',
+            search_keyword = '',
+            city = '',
+            state = '',
+            zip = '',
+            loci = '',
+            locp = '',
+            var1 = '',
+            var2 = '',
+            var3 = '',
+            src = '3SGFC';
+
+        (function () {
+            window.abtasty.send("segment", {
+                s: {
+                    bd_project: '',
+                    keyword: ''
+                }
+            });
+        });
+    </script>
+
+    <div id="copy-container">
+        <div id="main-copy">
+            <h1 id="headline">Asphalt Services Offered By Professionals</h1>
+
+            Find the help you need to get your Electrical or Asphalt done right with NYA Contractors.  If you are searching for reliable services we can quickly get you connected with our specialists. Tell us about your project and we will get you in touch with our professionals in your area.
+            <div id="highlighted-text">
+                Why Us?
+<ul>
+ 	<li>We get you connected fast</li>
+ 	<li>Asphalt specialists in your area</li>
+ 	<li>Get a quote</li>
+ 	<li>Residential and Commercial Service</li>
+</ul>            </div>
+        </div>
+        <div id="main-photo">
+            <img loading="lazy" loading="lazy" src="/service-photo-default.jpg" alt="Find Services Offered By Professionals" width="319">
+        </div>
+        <br clear="all"/>
+
+        <div id="wide-copy">
+            Tell us about your project in the form and we will get you connected with our specialists in your area.        </div>
+        
+    </div>
+
+    <div id="form-container" class="champion ">
+        <!-- <div id="nyacontractors_4737459149144064" class="agile_crm_form_embed"><span style="display:none">Fill out my <a href="https://nyacontractors.agilecrm.com/forms/4737459149144064">online form</a></span></div>
+        -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcclhhfOqxdZw3KFJ2yTrOfnA4k0vFqnm4pkzDWU1FV_8hVA/viewform?embedded=true" width="640" height="1159" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    
+</div>
+<!--
+    <div id="about-us">
+        <h2>About Us</h2>
+        <div class="about-us-image">
+            <img loading="lazy" loading="lazy" alt="About Us"
+                 src="/pics/ca-bg2-2880w.jpg"/>
+        </div>
+        <div class="about-us-copy">
+                            <p>At NYA Contractors, we are proud to provide our customers with the best possible Asphalt services experience. We believe in showing up on time and getting the job done right the first time, at a good value for your hard-earned money. Our contractors cover a range of services and look forward to helping you improve or repair your Asphalt. Contact us today for a no obligations, free quote!</p>
+                    </div>
+        <br clear="all"/>
+    </div>
+-->
+    <div id="how-it-works">
+        <h2>How It Works</h2>
+        <ul>
+            <li>
+                <img loading="lazy" loading="lazy" alt="Tell us about your project, service address, and how to get in touch."
+                     src="/pics/how-it-works_icon1.png"/>
+                <span>Tell us about your project, service address, and how to get in touch.</span>
+            </li>
+            <li>
+                <img loading="lazy" loading="lazy" alt="We contact our professionals and find the best one for you."
+                     src="/pics/how-it-works_icon2.png"/>
+                <span>We connect you with our trained service professionals to help with your job. If we can't serve you due to market availability or capacity, we will connect you with a vetted partner.</span>
+            </li>
+            <li>
+                <img loading="lazy" loading="lazy" alt="One of our skilled pros will be in touch with you to get started."
+                     src="/pics/how-it-works_icon3.png"/>
+                <span>A trusted professional will contact you about your project.</span>
+            </li>
+        </ul>
+    </div>
+
+    
+
+    <article id="post-10">
+
+	<div class="entry-content">
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## 
+https://gouldfamilycontractors.com/privacy-policy/
+https://gouldfamilycontractors.com/terms-and-conditions/
+-->
+    <div style="text-align:center;">
+        <h2 style="font-family: 'Playfair Display',serif;
+        font-size: 39px;
+        font-weight: normal;
+        letter-spacing: 1.1px;
+        margin-bottom: 10px;
+        color: #000;
+        text-align: center;
+        padding-bottom: -25px;
+        letter-spacing: .6em;
+        
+        padding-top: 30px;">Our Services</h2>
+    </div>
+    <!---
+    <div style="text-align:center;">
+        <h3 style="font-family: 'Playfair Display',serif;
+        font-size: 39px;
+        font-weight: normal;
+        letter-spacing: 1.1px;
+        margin-bottom: 10px;
+        color: #000;
+        text-align: center;
+        padding-bottom: -25px;
+        letter-spacing: .6em;
+        
+        padding-top: 30px;">Electrical</h3>
+    </div>
+    -->
+        <!---
+    <div style="text-align:center;">
+        <h3 style="font-family: 'Playfair Display',serif;
+        font-size: 39px;
+        font-weight: normal;
+        letter-spacing: 1.1px;
+        margin-bottom: 10px;
+        color: #000;
+        text-align: center;
+        padding-bottom: -25px;
+        letter-spacing: .6em;
+        padding-top: 30px;">Asphalt</h3>
+    </div>
+        -->
+<div class="rrow" style="display: block; margin: 0% 8%; justify-content: center;">
+
+
+    <div style="flex:30%;"> 
+        <h3 style="font-family: 'Playfair Display',serif;
+        font-size: 39px;
+        font-weight: normal;
+        letter-spacing: 1.1px;
+        color: #000;
+        text-align: center;
+        padding-top: 30px; text-align:center; transition: opacity 1s ease-in-out;"><font style="color: #2c3e4f;">Seal Coating</font>
+        </h3>
+
+        <div>If your asphalt is showing wear or hasn't been seal coated in 3-4 years, you should consider having it done in order to prevent any damage or further wear and tear. By applying seal coat, your pavement will be protected from water damage and look as good as new! In addition, an application of seal coat will help extend the life of your asphalt paving.<br>
+        </div><br>
+    </div> 
+
+    <div style="flex:35%;"> <h3 style="font-family: 'Playfair Display',serif;
+        font-size: 34px;
+        font-weight:500;
+        letter-spacing: 1.1px;
+        color: #000;
+        padding-bottom: 10px;
+        text-align: center;
+        padding-top: 30px;transition: opacity 1s ease-in-out;"><font style="color: #2c3e4f;">Striping & Markings</font></h3> 
+        <div>Our striping and pavement marking crews can handle all of your painting needs. Our inventory of paint machines and stencils allows us to complete your project in minimal time.<br></div>
+        <div class="rrow" style="display: flex; font-size: 14px;"><br>
+            <div style="flex: 30%; margin: 2% 1%;"><ul>
+                <li>Arrows</li>
+            <li>Crosswalks</li>
+            <li>Driving Lines</li>
+            <li>Fire Lanes</li></ul></div>
+            
+            <div style="flex: 30%; margin: 2% 1%;"><ul>
+                <li>Handicap Striping</li>
+            <li>Painted curbing</li>
+            <li>Parking Lines</li></ul>
+            </div>
+
+             <div style="flex: 30%; margin: 2% 1%;"><ul>
+                <li>Reserved & Numbered Spaces</li>
+                <li>Stop Bars</li>
+                <li>Other Painted Markings</li></ul>
+            </div>
+            
+            </div>
+    </div> 
+
+    <div style="flex:30%;"> <h3 style="font-family: 'Playfair Display',serif;
+        font-size: 39px;
+        font-weight: 500;
+        letter-spacing: 1.1px;
+        color: #000;
+        text-align: center;
+        padding-top: 30px;transition: opacity 1s ease-in-out;"><font style="color: #2c3e4f;">Signage</font></h3> 
+        <div>NYA Contractors can provide and install your parking lot or road signage. Whether safety, security, fire, traffic, handicap or parking; we can satisfy your requirements. Contact us today to learn more about our signage services!<br></div>
+    </div> 
+    
+</div>
+
+<div style="font-family: 'Playfair Display',serif;
+font-size: 20px;
+font-weight: normal;
+letter-spacing: 1.1px;
+color: #000;
+text-align: center;
+padding-top: 30px;transition: opacity 1s ease-in-out; width: 80%; margin: 0% 8%;">NYA Contractors adheres strictly to manufacturer's guidelines and never dilutes the seal in excess of specifications.</div>
+
+
+
+    <footer class="footer">
+        <div class="footer-block">
+            <div class="copyright-text">&copy; 2022 NYA Contractors</div>
+            <span>|</span>
+           <a href="/privacy.html">Privacy</a>
+            <span>|</span>
+            <a href="/terms.html">Terms Of Service</a>
+                                </div>
+        <br clear="all"/>
+    </footer>
+
+    </div><!-- #page -->
+
+        <script type="text/javascript">
+        window.wpforms_pageScroll = false;
+    </script>
+    <link rel='stylesheet' id='wpforms-smart-phone-field-css'  href='https://gouldfamilycontractors.com/wp-content/plugins/wpforms/pro/assets/css/vendor/intl-tel-input.min.css?ver=15.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wpforms-full-css'  href='https://gouldfamilycontractors.com/wp-content/plugins/wpforms/assets/css/wpforms-full.css?ver=1.5.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/plugins/3S-Opurity-main//assets/js/lazyload.js?ver=5.7.1' id='3ships-js-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/plugins/3S-Opurity-main//assets/js/scripts.js?ver=5.7.1' id='3ships-scripts-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/themes/nokeyword/js/dist/scripts.min.js?ver=1.0.0' id='hooch-js-js'></script>
+<script type='text/javascript' id='hooch-form-js-js-extra'>
+/* <![CDATA[ */
+var object_name = {"websiteCountry":"us","homeurl":"https:\/\/gouldfamilycontractors.com\/","sendGrid":null};
+var ajax = {"url":"https:\/\/gouldfamilycontractors.com\/wp-admin\/admin-ajax.php","additionalServicesRemove":null};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js?ver=1.0.0' id='hooch-form-js-js'></script>
+<script type='text/javascript' id='hooch-masked-js-js-extra'>
+/* <![CDATA[ */
+var cn_project_auto_suggest = {"json_uri":"https:\/\/gouldfamilycontractors.com\/wp-content\/themes\/nokeyword\/assets\/json\/bd_map.json"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/themes/nokeyword/js/form-scripts.js?ver=1.0.0' id='hooch-masked-js-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/themes/nokeyword/js/src/js-search.min.js?ver=5.7.1' id='cn-search-js-js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js?ver=1' id='js-cookie-js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js?ver=1' id='glightbox-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-includes/js/wp-embed.min.js?ver=5.7.1' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/plugins/wpforms/pro/assets/js/vendor/jquery.intl-tel-input.min.js?ver=15.0.0' id='wpforms-smart-phone-field-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/plugins/wpforms/assets/js/jquery.validate.min.js?ver=1.19.0' id='wpforms-validation-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/plugins/wpforms/assets/js/jquery.inputmask.bundle.min.js?ver=4.0.6' id='wpforms-maskedinput-js'></script>
+<script type='text/javascript' src='https://gouldfamilycontractors.com/wp-content/plugins/wpforms/assets/js/wpforms.js?ver=1.5.2' id='wpforms-js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpforms_settings = {"val_required":"This field is required.","val_url":"Please enter a valid URL.","val_email":"Please enter a valid email address.","val_email_suggestion":"Did you mean {suggestion}?","val_email_suggestion_title":"Click to accept this suggestion.","val_number":"Please enter a valid number.","val_confirm":"Field values do not match.","val_fileextension":"File type is not allowed.","val_filesize":"File exceeds max size allowed.","val_time12h":"Please enter time in 12-hour AM\/PM format (eg 8:45 AM).","val_time24h":"Please enter time in 24-hour format (eg 22:45).","val_requiredpayment":"Payment is required.","val_creditcard":"Please enter a valid credit card number.","val_smart_phone":"Please enter a valid phone number.","val_post_max_size":"The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb.","val_checklimit":"You have exceeded the number of allowed selections: {#}.","post_max_size":"104857600","uuid_cookie":"1","locale":"en","wpforms_plugin_url":"https:\/\/gouldfamilycontractors.com\/wp-content\/plugins\/wpforms\/","gdpr":"","currency_code":"USD","currency_thousands":",","currency_decimal":".","currency_symbol":"$","currency_symbol_pos":"left"}
+/* ]]> */
+</script>
+
+    <script type="text/javascript">
+        // attach click handlers
+        jQuery("#logo-container img, #social-icons a, #c, .footer-block h4 a").click(function (e) {
+            e.preventDefault();
+            focusOnForm();
+        });
+        jQuery(".footer-block img").click(function (e) {
+            e.preventDefault();
+            focusOnForm();
+
+            // if user entered their email in the stay informed input box in the footer, carry it over to the main contact form
+            if (jQuery(this).attr("id") == 'stay-informed-button') {
+                stayInformedValue = jQuery("#stay-informed-input").val();
+                if (stayInformedValue != '') {
+                    jQuery(".email-address input").val(stayInformedValue);
+                }
+            }
+        });
+
+        jQuery('.site-name-tc').text('www.' + window.location.hostname);
+
+        jQuery("#popup").on('click', function (event) {
+            if (event.target.id == "popup") {
+                modalForm();
+            }
+        });
+
+        function modalForm() {
+            jQuery("#popup").fadeToggle().css('display', 'flex');
+        }
+
+    </script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-5b220f295ac98f3570e","applicationID":"1100181646","transactionName":"Ml0HbBZUXhFQB0ULWwsXJFsQXF8MHhBUD0QJWRFdSV1fD1QUUAVRSF4KSgk=","queueTime":0,"applicationTime":183,"atts":"HhoEGl5OTR8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+    <script id="_agile_min_js" async type="text/javascript" src="https://nyacontractors.agilecrm.com/stats/min/agile-min.js"> </script>
+    <script type="text/javascript" >
+    var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){
+    _agile.set_account('g7tvbsck87abkmvhjp6fh3h539', 'nyacontractors', false);
+    _agile.track_page_view();
+    _agile_execute_web_rules();};
+    </script>
+</body>
+
+    
+<!-- Created Sun, 31 Jul 2022 03:56:29 GMT -->
+</html>
+
