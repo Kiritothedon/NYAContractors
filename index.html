@@ -134,9 +134,7 @@ img.emoji {
 	<div id="page" class="hfeed site ">
 		<header class="navigation" role="banner">
 			<div id="logo-container">
-				<a href="https://nyacontractors.com/" class="desktop-only"><img loading="lazy" src="/hg.png" alt="NYA Contractors"></a>
-				<a href="https://nyacontractors.com/" class="mobile-only"><img loading="lazy" src="/hg.png" alt="NYA Contractors"></a>
-				
+				<a href="https://nyacontractors.com/"><img loading="lazy" src="/hg.png" alt="NYA Contractors"></a>
                 <div id="mobile-menu-compact">
 					<div class="mobile-toggle">
 						<div class="bar1"></div>
@@ -146,9 +144,8 @@ img.emoji {
 				</div>
 			</div>
             <div id="h-text">
-                <h1  class="desktop-only" style="font-size:28px; margin: 5% 0% 0% 0%; font-weight: 700; text-align:right;">Georgia Top Asphalt Services Provider</h1>
+                <h1 class="desktop-only">Georgia Top Asphalt Services Provider</h1>
             </div>
-			<br clear="all"/>
 
 			<div class="navigation-wrapper">
 				<div class="row">
@@ -196,8 +193,14 @@ img.emoji {
         border-radius: 8px;
         box-shadow: var(--shadow-md);
         width: 100%;
-        max-width: 500px;
+        max-width: 520px;
         margin: 0;
+        box-sizing: border-box;
+    }
+    
+    #form-container form {
+        width: 100%;
+        box-sizing: border-box;
     }
     
     #form-container h2 {
@@ -222,6 +225,10 @@ img.emoji {
         font-size: 14px;
     }
     
+    .form-group {
+        width: 100%;
+    }
+    
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group input[type="tel"],
@@ -238,6 +245,7 @@ img.emoji {
         background-color: #ffffff;
         display: block;
         margin: 0;
+        min-width: 0;
     }
     
     .form-group input:focus,
@@ -337,6 +345,7 @@ img.emoji {
         grid-template-columns: 1fr 520px;
         gap: 50px;
         align-items: start;
+        position: relative;
     }
     
     #main-copy {
@@ -355,9 +364,19 @@ img.emoji {
         grid-column: 2;
         position: sticky;
         top: 120px;
-        max-height: calc(100vh - 140px);
+        max-height: calc(100vh - 200px);
         overflow-y: auto;
-        margin-bottom: 40px;
+        align-self: start;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    
+    /* Ensure form stays within grid bounds */
+    #copy-container::after {
+        content: '';
+        grid-column: 1 / -1;
+        height: 1px;
     }
     
     /* Ensure form doesn't overlap with How It Works section */
@@ -370,12 +389,15 @@ img.emoji {
     
     #wide-copy {
         grid-column: 1 / -1;
-        margin-top: 30px;
+        margin-top: 50px;
         padding-top: 30px;
         border-top: 2px solid var(--border-color);
         text-align: center;
         color: var(--text-light);
         font-size: 16px;
+        clear: both;
+        position: relative;
+        z-index: 2;
     }
     
     #headline {
@@ -543,6 +565,11 @@ img.emoji {
         justify-content: center;
     }
     
+    /* Hide mobile menu compact in desktop */
+    #mobile-menu-compact {
+        display: none;
+    }
+    
     #h-text {
         position: absolute;
         right: 20px;
@@ -557,6 +584,14 @@ img.emoji {
         font-size: 24px;
         font-weight: 600;
         letter-spacing: -0.5px;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+    
+    .mobile-only {
+        display: none;
     }
     
     .navigation-wrapper {
@@ -770,6 +805,21 @@ img.emoji {
             max-height: 100px;
         }
         
+        .desktop-only {
+            display: none !important;
+        }
+        
+        .mobile-only {
+            display: block !important;
+        }
+        
+        #mobile-menu-compact {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
         #top-nav {
             flex-wrap: wrap;
             gap: 8px;
@@ -797,6 +847,12 @@ img.emoji {
             width: 100%;
             padding: 12px;
             font-size: 16px; /* Prevents zoom on iOS */
+            box-sizing: border-box;
+        }
+        
+        #form-container {
+            max-width: 100%;
+            width: 100%;
         }
     }
 </style>
